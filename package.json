@@ -1,0 +1,22 @@
+{
+  "name": "html-css.generation.org",
+  "version": "1.0.0",
+  "description": "extended homework",
+  "main": "js.js",
+  "scripts": {
+    "build-css": "tailwindcss build src/styles.css -o public/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konradszymanski/html-css.Generation.org.git"
+  },
+  "author": "konrad szymanski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/konradszymanski/html-css.Generation.org/issues"
+  },
+  "homepage": "https://github.com/konradszymanski/html-css.Generation.org#readme",
+  "dependencies": {
+    "tailwindcss": "^2.0.2"
+  }
+}
