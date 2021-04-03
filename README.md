@@ -1,5 +1,4 @@
 # Blog Example
-## Generation.org
 Blog example build as project for Generation.org programme.\
 \
 <a link href='https://myblogexample.netlify.app/#top' target="_blank">MyBlogExample</a>\
