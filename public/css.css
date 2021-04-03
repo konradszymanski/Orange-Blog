@@ -1,0 +1,12 @@
+/* body {
+    background: linear-gradient(to right, white 0%, white 60%, #000000 50%, black 50%, black 100%);
+} */
+.upper {
+    width: 35vw;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -1;
+}
