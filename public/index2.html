@@ -7,26 +7,27 @@
     <link rel="stylesheet" type="text/css" href="/public/styles.css">
     <link rel="stylesheet" type="text/css" href="css.css">
     <script src="script.js"></script>
-    <title>BlogExample</title>
+    <title>Orange Blog Example</title>
     <!-- important: this is blog example made from scratch // all the photos are taken from: https://unsplash.com/ -->
 </head>
 <!-- <body class='bg-black text-yellow-500'> -->
 
 <body class='text-yellow-500 h-full '>
-    <div class="upper h-full">
 
-    </div>
     <div>
         <!--wrapper-->
         <div>
             <nav class='text-3x flex justify-between '>
-                <div class='flex justify-start'>
+                <div class="verticallBackground h-full">
+                    <!-- black verticall full height 35vw div -->
+                </div>
+                <div class='flex justify-start logo'>
                     <h1 class="m-5">
-                        <a href="">Some Nice Pictures</a>
+                        <a href="">Orange Blog</a>
                     </h1>
                 </div>
 
-                <ul class=' flex justify-end'>
+                <ul class='flex justify-start navList'>
                     <li class="m-5">
                         <a href="">
                             <span>HOME</span>
@@ -45,30 +46,31 @@
                 </ul>
             </nav>
             <!-- </div> end nav -->
+            <header>
+                <img src=' /image/emily-pippus-92HPRktIkBM-unsplash.jpg' alt="hero" class="heroImg">
 
+                <h1 class=' text-4xl'>Nice</h1>
+                <h2 class='text-5xl'>Orange</h2>
+                <h2 class='text-6xl'>Pictures</h2>
+                <ol id='top'>
+                    <li><a href="#girl">girl</a></li>
+                    <li><a href="#coconut">coconut</a></li>
+                    <li><a href="#city">city</a></li>
+                    <li><a href="#girl2">girl2</a></li>
+                    <li><a href="#coconut2">coconut2</a></li>
+                    <li><a href="#city2">city2</a></li>
+                </ol>
+
+            </header>
             <main class="px-16 py-6">
-                <div>
+                <!-- <div>
                     <a href="">Log in</a>
                     <a href="">Sign up</a>
-                </div>
-                <header>
-                    <div class="headerImg">
-                        <img src='/image/a.jfif'' alt="foto" id=' girl' class='element-left halfHide '>
-                    </div>
-                    <h2 class=' text-5xl'>Nice</h2>
-                    <h3 class='text-6xl'>Pictures</h3>
-                    <ol id='top'>
-                        <li><a href="#girl">girl</a></li>
-                        <li><a href="#coconut">coconut</a></li>
-                        <li><a href="#city">city</a></li>
-                        <li><a href="#girl2">girl2</a></li>
-                        <li><a href="#coconut2">coconut2</a></li>
-                        <li><a href="#city2">city2</a></li>
-                    </ol> <br>
-                </header>
+                </div> -->
+
                 <div>
                     <!--foto-->
-                    <div>
+                    <div class='gallery'>
                         <img src='/image/a.jfif'' alt="foto" id=' girl' class='element-left halfHide '>
 
                         <img src='/image/b.jfif' alt="foto" id='coconut' class='fade-in'>
@@ -85,6 +87,25 @@
                             <span>mozliwy opis</span>
                         </div>
                     </div>
+                </div>
+
+
+                <div class="container mx-auto px-4">
+
+                    <section class="py-8 px-4">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="hidden md:block md:w-1/2 px-4">
+                                <div class="h-full w-full bg-cover rounded shadow-md"
+                                    style="background-image: url('https://source.unsplash.com/random/1280x720')"></div>
+                            </div>
+                            <div class="md:w-1/2 h-auto px-4">
+                                <div class="mb-8"><img class="rounded shadow-md"
+                                        src="https://source.unsplash.com/random/1280x720" alt=""></div>
+                                <div><img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720"
+                                        alt=""></div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </main>
         </div>
