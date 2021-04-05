@@ -27,6 +27,20 @@ nav {
     font-size: 20px;
 }
 
+h2 {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+h3 {
+    letter-spacing: 7px;
+}
+
+span {
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
 .logo {
     min-width: 35vw;
 }
@@ -42,7 +56,7 @@ header {
     z-index: -2;
     margin: 0 auto;
     width: 20%;
-    top: 100px;
+    top: 50px;
     left: 35vw;
 
 }
