@@ -26,6 +26,16 @@ header {
     padding-right: 15px;
 }
 
+.heroImgOran {
+    position: absolute;
+    z-index: -2;
+    margin: 0 auto;
+    width: 20%;
+    top: 100px;
+    left: 35vw;
+
+}
+
 .verticallBackground {
     width: 35vw;
     background-color: black;
@@ -45,8 +55,11 @@ header {
 
 }
 
-
 .navElements {
     position: relative;
     top: 50px;
+}
+
+.gallery {
+    top: 200vh;
 }
