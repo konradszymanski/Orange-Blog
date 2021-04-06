@@ -30,10 +30,15 @@ nav {
 h2 {
     font-weight: 900;
     text-transform: uppercase;
+    margin-top: 7px;
 }
 
 h3 {
     letter-spacing: 7px;
+}
+
+h4 {
+    letter-spacing: 4px;
 }
 
 span {
