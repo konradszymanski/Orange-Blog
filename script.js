@@ -26,17 +26,14 @@ let x = 0
 
 window.onload = function heroSlider() {
     if (x < 34) {
-        x = x + .3
-
+        x = x + .2
         heroImg.style.left = x + 'vw';
         requestAnimationFrame(heroSlider)
     }
 }
 
 function start() {
-
     requestAnimationFrame(heroSlider)
-
 }
 window.onload.start();
 //setTimeout(heroSlider, 5000)
