@@ -102,3 +102,27 @@ header {
 .gallery {
     top: 200vh;
 }
+
+/* BACK TO TOP START */
+.backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.topIcon {
+    width: 30px;
+}
+
+.topIcon:hover {
+    background-color: #F59E0B;
+    color: #F59E0B;
+}
+
+/* BACK TO TOP END */

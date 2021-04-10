@@ -1,11 +1,19 @@
-let blogHeight = window.outerHeight;
-let widthh = window.outerWidth;
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+    scrollFunction()
+};
+let topButton = document.getElementById("backTop");
 
-function showHeight() {
-    // let widthh = window.outerWidth;
-    //  let widthh = outerWidth;
-    console.log(widthh)
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        topButton.style.display = "block";
+    } else {
+        topButton.style.display = "none";
+    }
 }
-console.log(widthh)
-console.log(blogHeight)
-showHeight();
+
+// When the user clicks on the button, scroll to the top of the document
+function backToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
