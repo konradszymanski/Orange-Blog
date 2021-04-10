@@ -19,3 +19,24 @@ function backToTop() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 
 }
+
+
+let heroImg = document.getElementById('heroImg');
+let x = 0
+
+window.onload = function heroSlider() {
+    if (x < 34) {
+        x = x + .3
+
+        heroImg.style.left = x + 'vw';
+        requestAnimationFrame(heroSlider)
+    }
+}
+
+function start() {
+
+    requestAnimationFrame(heroSlider)
+
+}
+window.onload.start();
+//setTimeout(heroSlider, 5000)
