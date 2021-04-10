@@ -6,7 +6,7 @@ let topButton = document.getElementById("backTop");
 let arrowUp = document.getElementById('arrowUP')
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 400) {
         topButton.style.display = "block";
     } else {
         topButton.style.display = "none";

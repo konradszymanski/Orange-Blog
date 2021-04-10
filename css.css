@@ -25,7 +25,6 @@ nav {
     position: relative;
     z-index: 99;
     font-size: 20px;
-    width: auto;
 }
 
 h2 {
@@ -133,17 +132,15 @@ header {
 
 /* BACK TO TOP END */
 
+/* hover START, builded based on:https://dev.to/afif/another-100-underline-overlay-animations-the-extended-css-collection-574c?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email */
 .unexpected-2 {
     padding-bottom: 2px;
     clip-path: polygon(1px 1px, 100% 1px, 100% calc(100% + 3px), -100vmax calc(100% + 3px), -100vmax 100%, 1px 100%);
     box-shadow: -100vmax 3px 0px #F59E0B;
     transition: 0.2s linear;
-    width: auto;
+
 }
 
 .unexpected-2:hover {
     box-shadow: 0 3px 0px #F59E0B;
-    letter-spacing: 2px;
-    padding-left: -10px;
-    z-index: 100;
 }
