@@ -35,6 +35,7 @@ h2 {
 
 h3 {
     letter-spacing: 7px;
+    margin-right: -10px;
 }
 
 h4 {
@@ -104,6 +105,7 @@ header {
     cursor: pointer;
     padding: 10px;
     border-radius: 50px;
+    border: 3px dotted white;
 }
 
 .topIcon {
@@ -133,4 +135,38 @@ header {
 
 .unexpected-2:hover {
     box-shadow: 0 3px 0px #F59E0B;
+}
+
+/* footer */
+footer {
+    height: 100px;
+    position: relative;
+    bottom: 0;
+    background: #F59E0B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 40px;
+    transition: transform 1.5s;
+    margin: 0 5px
+}
+
+.linkedIn {
+    width: 45px;
+}
+
+.konradSite {
+    border: 3px solid black;
+    border-radius: 50px;
+    padding: 3px;
+}
+
+footer img:hover {
+    position: relative;
+    /* bottom: 7px; */
+    transform: translate(20px, 20px);
+    transform: rotate(360deg);
 }
