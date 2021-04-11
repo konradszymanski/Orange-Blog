@@ -1,3 +1,4 @@
+//BACK TO TOP START
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
     scrollFunction()
@@ -19,21 +20,25 @@ function backToTop() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 
 }
-
-
+//BACK TO TOP END
+//HERO IMAGE SLIDE START
 let heroImg = document.getElementById('heroImg');
 let x = 0
 
-window.onload = function heroSlider() {
+const heroSlider = () => {
+
+    x += .2
+    heroImg.style.left = x + 'vw';
     if (x < 34) {
-        x = x + .2
-        heroImg.style.left = x + 'vw';
         requestAnimationFrame(heroSlider)
     }
 }
 
-function start() {
+const start = () => {
     requestAnimationFrame(heroSlider)
 }
-window.onload.start();
+window.onload = () => {
+    start();
+}
 //setTimeout(heroSlider, 5000)
+//HERO IMAGE SLIDE END
