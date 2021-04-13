@@ -1,6 +1,10 @@
 /* body {
     background: linear-gradient(to right, white 0%, white 60%, #000000 50%, black 50%, black 100%);
 } */
+/* body */
+/* footer */
+/* gallery */
+/* responsive */
 html,
 body {
     height: 100%;
@@ -170,3 +174,14 @@ footer img:hover {
     transform: translate(20px, 20px);
     transform: rotate(360deg);
 }
+
+/* gallery */
+.middlePic {
+    margin-top: 20px
+}
+
+/* responsive START*/
+
+
+
+/* responsive END*/
