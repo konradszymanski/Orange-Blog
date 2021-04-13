@@ -181,7 +181,67 @@ footer img:hover {
 }
 
 /* responsive START*/
+@media only screen and (max-width: 640px) {
+    .heroImgOran {
+        height: 70vh;
+        width: auto;
+    }
+
+    .logo h1 {
+        margin: 3px 0 20px 5px;
+    }
+
+    .nav {
+        width: 80vw;
+    }
+
+    .navList {
+        display: block;
+        position: absolute;
+        right: 4px;
+    }
 
 
+    .navList .m-5 {
+        /* position: absolute; */
+        padding-right: 3px;
+        top: 3px;
+        right: 10px;
+        vertical-align: middle;
+        margin: 3px;
+        border-right: 1px solid #F59E0B;
+        height: 20px;
+        line-height: 17px;
+        text-align: right;
+    }
+
+    header {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .text-5xl {
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 0;
+    }
+
+    .text-6xl {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    #top li {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .headerImgList {
+        bottom: 0;
+
+    }
+
+}
 
 /* responsive END*/
