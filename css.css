@@ -181,7 +181,7 @@ footer img:hover {
 }
 
 /* responsive START*/
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 740px) {
     .heroImgOran {
         height: 70vh;
         width: auto;
