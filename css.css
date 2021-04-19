@@ -5,6 +5,7 @@
 /* footer */
 /* gallery */
 /* responsive */
+/* top */
 html,
 body {
     height: 100%;
@@ -240,6 +241,10 @@ footer img:hover {
     .headerImgList {
         bottom: 0;
 
+    }
+
+    .heroImgOran {
+        left: -125px;
     }
 
     /* gallery */
