@@ -242,6 +242,17 @@ footer img:hover {
 
     }
 
+    /* gallery */
+    main,
+    .px-16,
+    .py-6 {
+        padding: 0;
+    }
+
+    .middlePic {
+        margin-top: 27px;
+    }
+
 }
 
 /* responsive END*/
