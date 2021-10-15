@@ -21,6 +21,7 @@ function backToTop() {
 
 }
 //BACK TO TOP END
+
 //HERO IMAGE SLIDE START
 let heroImg = document.getElementById('heroImg');
 let x = 0
@@ -31,6 +32,8 @@ const heroSlider = () => {
     heroImg.style.left = x + 'vw';
     if (x < 34) {
         requestAnimationFrame(heroSlider)
+    } else {
+        document.querySelector('.gallery').style.display = 'block';
     }
 }
 

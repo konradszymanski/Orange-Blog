@@ -97,6 +97,8 @@ header {
 
 .gallery {
     top: 200vh;
+    display: none;
+    max-width: 900px;
 }
 
 /* BACK TO TOP START */
