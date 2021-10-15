@@ -30,10 +30,21 @@ const heroSlider = () => {
 
     x += .2
     heroImg.style.left = x + 'vw';
+
     if (x < 34) {
         requestAnimationFrame(heroSlider)
     } else {
+        addLazyToImg();
         document.querySelector('.gallery').style.display = 'block';
+    }
+}
+const addLazyToImg = () => {
+    const images = document.querySelectorAll('img');
+    // loop start from 1 to ommit the heroImage
+    for (let i = 1; i < images.length; i++) {
+        for (let i = 0; i < images.length; i++) {
+            images[i].classList.add('lazy');
+        }
     }
 }
 
@@ -43,5 +54,18 @@ const start = () => {
 window.onload = () => {
     start();
 }
+// const addLazyLoading = () =>{
+
+// }
+// addLazyLoading();
 //setTimeout(heroSlider, 5000)
 //HERO IMAGE SLIDE END
+
+//lazy loading jquery
+// http://jquery.eisbehr.de/lazy/
+
+$(document).ready(function(){
+    $("img.lazy").lazyload({
+        effect: "fadeIn"
+    });           
+});
