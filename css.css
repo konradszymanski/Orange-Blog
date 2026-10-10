@@ -97,7 +97,7 @@ header {
 
 .gallery {
     top: 200vh;
-    display: none;
+    display: block;
     max-width: 900px;
 }
 
@@ -124,9 +124,7 @@ header {
     color: #F59E0B;
 }
 
-.backToTop:focus {
-    outline: none;
-}
+.backToTop:focus-visible { outline: 3px solid black; outline-offset: 3px; }
 
 
 /* BACK TO TOP END */
@@ -263,3 +261,10 @@ footer img:hover {
 }
 
 /* responsive END*/
+
+[hidden] { display: none !important; }
+@media (prefers-reduced-motion: reduce) {
+    html, body { scroll-behavior: auto; }
+    .headerImgList { animation: none; }
+    footer img { transition: none; }
+}

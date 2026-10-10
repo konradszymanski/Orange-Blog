@@ -4,7 +4,8 @@
   "description": "extended homework",
   "main": "js.js",
   "scripts": {
-    "build-css": "tailwindcss build src/styles.css -o public/styles.css"
+    "build-css": "tailwindcss build src/styles.css -o public/styles.css",
+    "test": "node --test test/*.test.js"
   },
   "repository": {
     "type": "git",

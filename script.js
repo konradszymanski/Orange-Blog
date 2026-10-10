@@ -1,71 +1,36 @@
-//BACK TO TOP START
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-    scrollFunction()
-};
-let topButton = document.getElementById("backTop");
-let arrowUp = document.getElementById('arrowUP')
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 400) {
-        topButton.style.display = "block";
-    } else {
-        topButton.style.display = "none";
+function initializePage(document, window) {
+    const topButton = document.getElementById('backTop');
+    const hero = document.getElementById('heroImg');
+    const gallery = document.querySelector('.gallery');
+    function updateTopButton() {
+        if (topButton) topButton.hidden = (window.scrollY || document.documentElement.scrollTop || document.body.scrollTop) <= 400;
     }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function backToTop() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-
-}
-//BACK TO TOP END
-
-//HERO IMAGE SLIDE START
-let heroImg = document.getElementById('heroImg');
-let x = 0
-
-const heroSlider = () => {
-
-    x += .2
-    heroImg.style.left = x + 'vw';
-
-    if (x < 34) {
-        requestAnimationFrame(heroSlider)
-    } else {
-        addLazyToImg();
-        document.querySelector('.gallery').style.display = 'block';
+    if (topButton) {
+        topButton.style.display = 'block';
+        topButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+        });
+        window.addEventListener('scroll', updateTopButton, { passive: true });
+        updateTopButton();
     }
-}
-const addLazyToImg = () => {
-    const images = document.querySelectorAll('img');
-    // loop start from 1 to ommit the heroImage
-    for (let i = 1; i < images.length; i++) {
-        for (let i = 0; i < images.length; i++) {
-            images[i].classList.add('lazy');
-        }
+    if (!gallery) return;
+    // Content stays available without JavaScript or without animation support.
+    if (!hero || typeof window.requestAnimationFrame !== 'function' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        if (hero) hero.style.left = '34vw';
+        gallery.hidden = false;
+        return;
     }
+    gallery.hidden = true;
+    hero.style.left = '0vw';
+    let startTime;
+    function animate(timestamp) {
+        if (startTime === undefined) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / 1200, 1);
+        hero.style.left = `${34 * progress}vw`;
+        if (progress < 1) window.requestAnimationFrame(animate);
+        else gallery.hidden = false;
+    }
+    window.requestAnimationFrame(animate);
 }
-
-const start = () => {
-    requestAnimationFrame(heroSlider)
-}
-window.onload = () => {
-    start();
-}
-// const addLazyLoading = () =>{
-
-// }
-// addLazyLoading();
-//setTimeout(heroSlider, 5000)
-//HERO IMAGE SLIDE END
-
-//lazy loading jquery
-// http://jquery.eisbehr.de/lazy/
-
-$(document).ready(function(){
-    $("img.lazy").lazyload({
-        effect: "fadeIn"
-    });           
-});
+if (typeof module !== 'undefined' && module.exports) module.exports = { initializePage };
+if (typeof window !== 'undefined') initializePage(window.document, window);
