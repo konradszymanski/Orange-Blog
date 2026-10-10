@@ -1,0 +1,26 @@
+name: Dependency hygiene
+
+on:
+  pull_request:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - name: Ensure installed dependencies are not tracked
+        run: |
+          if [ -n "$(git ls-files node_modules)" ]; then
+            echo "node_modules must not be tracked"
+            exit 1
+          fi
+      - name: Install from the lockfile
+        run: npm ci
